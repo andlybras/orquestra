@@ -17,7 +17,13 @@
             <p class="brand-subtitle">Gestão de Processos</p>
         </div>
         <div class="login-box">
-            <form>
+            <form method="POST">
+                {% csrf_token %}
+
+                {% if error %}
+                    <p class="error-message">{{ error }}</p>
+                {% endif %}
+
                 <div class="input-group">
                     <input type="text" id="username" class="input-field" name="username" required placeholder=" ">
                     <label for="username" class="input-label">Usuário</label>
@@ -26,7 +32,8 @@
                     <input type="password" id="password" class="input-field" name="password" required placeholder=" ">
                     <label for="password" class="input-label">Senha</label>
                 </div>
-                <button type="submit">Entrar</button>
+                
+                <button type="submit" class="btn btn-primary">Entrar</button>
                 <a href="#" class="btn btn-secondary">Acesso Livre</a>
             </form>
         </div>

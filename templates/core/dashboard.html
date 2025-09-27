@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orquestra - Gerenciamento de Processos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700;800&family=Paprika&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="nucleus-profile">
+                <img src="https://via.placeholder.com/80" alt="Foto do Núcleo" class="nucleus-photo">
+                <h2 class="nucleus-name">Nome do Núcleo</h2>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-link" data-url="{% url 'notificacoes_content' %}">Notificações</a>
+                <a href="#" class="nav-link" data-url="#">Mapa de Processos</a>
+                <a href="#" class="nav-link" data-url="#">Incluir Processo</a>
+                <a href="/logout" class="nav-link nav-link-logout">Sair</a>
+            </nav>
+        </aside>
+
+        <main class="content-panel" id="content-panel">
+            <h1>Bem-vindo ao Orquestra!</h1>
+            <p>Selecione uma opção no menu à esquerda para começar.</p>
+        </main>
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

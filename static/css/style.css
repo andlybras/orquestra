@@ -161,3 +161,83 @@ button:hover {
     color: #003366;
     border-color: #FFFFFF;
 }
+
+.dashboard-body {
+    background: #E4F2FF; 
+    color: #212529;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-panel {
+    flex-grow: 1; 
+    padding: 2rem;
+    overflow-y: auto; 
+}
+
+.nucleus-profile {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.nucleus-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #DEE2E6;
+}
+
+.nucleus-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #003366;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+}
+
+.nav-link {
+    display: block;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #495057;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: #E4F2FF;
+    color: #003366;
+}
+
+.nav-link-logout {
+    margin-top: auto; 
+}
+
+.error-message {
+    background-color: rgba(255, 100, 100, 0.2);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 100, 100, 0.5);
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
