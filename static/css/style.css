@@ -2,90 +2,123 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Montserrat', sans-serif;
-    background: #121212;
-    color: #fff;
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: #E4F2FF;
+    background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
-/* Estilo para o nosso novo título único */
-.title {
-    font-size: 6rem;
-    font-weight: 700;
-    margin: 0;
-    margin-bottom: 40px;
-    color: #03a9f4; /* Dando uma cor de destaque ao título */
+.brand-container {
+    padding-right: 5rem;
+    text-align: right; 
+}
+
+.brand-title {
+    font-family: 'Paprika', cursive;
+    font-size: 7rem; 
+    font-weight: 400; 
+    margin: -10px;
+    line-height: 1;
+}
+
+.brand-subtitle {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 0.5rem 0 0;
+    color: #E4F2FF;
 }
 
 .login-box {
-    background: rgba(30, 30, 30, 0.9);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-    width: 350px;
-}
-
-.login-box h2 {
-    margin: 0 0 20px;
-    text-align: center;
-    font-weight: 300;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+    width: 100%;
+    max-width: 300px;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 2.5rem;
 }
 
-.input-group input {
+.input-field {
     width: 100%;
     padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
+    font-size: 1rem;
+    color: #FFFFFF; 
     border: none;
-    border-bottom: 2px solid #555;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
     outline: none;
     background: transparent;
 }
 
-.input-group label {
+.input-label {
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #888;
-    pointer-events: none;
-    transition: .5s;
-}
-
-.input-group input:focus ~ label,
-.input-group input:valid ~ label {
     top: -20px;
     left: 0;
-    color: #03a9f4;
-    font-size: 12px;
+    font-size: 0.875rem;
+    color: #FFFFFF;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-field:not(:focus):placeholder-shown ~ .input-label {
+    top: 10px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-field:focus {
+    border-bottom-color: #FFFFFF;
+}
+
+.input-field:focus ~ .input-label {
+    top: -20px;
+    font-size: 0.875rem;
+    color: #FFFFFF;
 }
 
 button {
     width: 100%;
-    padding: 15px;
+    padding: 1rem;
     border: none;
-    border-radius: 5px;
-    background: #03a9f4;
-    color: #fff;
-    font-size: 18px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #003366; 
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background: #0288d1;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
