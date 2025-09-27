@@ -4,7 +4,7 @@ body, html {
     height: 100%;
     font-family: 'Bai Jamjuree', sans-serif;
     color: #E4F2FF;
-    background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #8c3a40, #f23d4c, #f2b705, #f2a65a);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
 }
