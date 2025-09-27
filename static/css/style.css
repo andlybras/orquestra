@@ -122,3 +122,42 @@ button:hover {
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+.btn {
+    display: block; 
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box; 
+}
+
+.btn-primary {
+    background: #FFFFFF;
+    color: #003366; 
+    border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 1rem;
+}
+
+.btn-secondary:hover {
+    background: #FFFFFF;
+    color: #003366;
+    border-color: #FFFFFF;
+}
